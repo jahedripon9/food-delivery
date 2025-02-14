@@ -1,10 +1,11 @@
 import express from 'express';
 import cors from 'cors';
 import { connect } from 'mongoose';
+import 'dotenv/config'
 import { connectDB } from './config/db.js';
 import foodRoute from './routers/foodRoute.js';
 import userRouter from './routers/userRoute.js';
-import 'dotenv/config'
+import cartRouter from './routers/cartRoute.js';
 
 // app config
 const app = express();
@@ -20,7 +21,8 @@ connectDB();
 // API endpoints
 app.use("/api/food", foodRoute);
 app.use("/images", express.static("uploads"));
-app.use("/api/user", userRouter)
+app.use("/api/user", userRouter);
+app.use("/api/cart", cartRouter);
 
 
 app.get('/', (req, res) => {
