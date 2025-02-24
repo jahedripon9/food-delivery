@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import 'dotenv/config'
 import { connectDB } from './config/db.js';
 import foodRoute from './routers/foodRoute.js';
 import userRouter from './routers/userRoute.js';
@@ -26,10 +27,9 @@ app.use("/api/order", orderRouter)
 
 
 app.get('/', (req, res) => {
-    res.send("API is running...");
+    res.send("API Working")
 })
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-})
+
+app.listen(port, () => console.log('Server Started on PORT:' + port))
 
