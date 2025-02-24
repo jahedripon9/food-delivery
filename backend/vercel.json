@@ -15,11 +15,8 @@
         {
             "src": "/(.*)",
             "dest": "server.js"
-        },
-        {
-            "source": "/feedback/((?!general).*)",
-            "destination": "/api/feedback/general"
         }
+      
     ]
     
 }
