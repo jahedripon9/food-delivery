@@ -28,8 +28,10 @@ app.use("/api/order", orderRouter)
 
 
 app.get('/', (req, res) => {
-    res.send("API Working")
+    res.send("API is running...");
 })
 
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+})
 
-app.listen(port, () => console.log('Server Started on PORT:' + port))
