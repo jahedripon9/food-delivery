@@ -1,7 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-import { connect } from 'mongoose';
-import 'dotenv/config'
 import { connectDB } from './config/db.js';
 import foodRoute from './routers/foodRoute.js';
 import userRouter from './routers/userRoute.js';
